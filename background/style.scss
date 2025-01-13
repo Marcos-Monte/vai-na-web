@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: tomato;
+    height: 60vh;
+
+    background-image: url('./imagens/download.jpeg');
+
+    /* Repetição */
+    background-repeat: repeat-x; /* Repete no eixo X */
+    background-repeat: repeat-y;  /* Repete no eixo X */
+    background-repeat: no-repeat;  /* Não Repete */
+
+    /* Tamanhos */
+    background-size: cover; /* Dimensiona a imagem por toda a caixa. Pode ser que a imagem fique cortada (Não apareça 100% */
+    background-size: contain; /* Dimensioa a imagem do tamanho que ela é */
+    /* background-size: 100% 100%; */ /* Dois valores (largura x altura */
+
+    /*  Posicionamento da Imagem*/
+    background-position: center; /* Cenzaliza a imagem */
+    background-position: top; /* Encostado em cima */
+    background-position: left; /* Encostado na esquerda */
+    background-position: right; /* Encostado na direita*/
+}

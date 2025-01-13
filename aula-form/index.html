@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--Estilização -->
+        
+	    <style>
+            body{
+                background-color: #222;
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            header{
+                text-align: center;
+            }
+            form{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            button, fieldset{
+                width: 100%;
+                margin-bottom: .5em;
+            }
+            
+        </style>
+        <title>Formulário T3</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cadastre-se</h1>
+            <h3>Compre ingressos e combos de pipoca com conforto e comodidade</h3>
+        </header>
+        <main>
+            <!-- Forma envolve todo o formulário; action é um atributo que indica para onde o formulário será enviado-->
+            <form action="" >
+                <!-- Fieldset agrupa assuntos no formulario -->
+                <fieldset>
+                    <legend>Preencha os Campos</legend>
+
+                    <div>
+                        <label for="nome">Nome: </label> <!-- Label é uma 'etqueta', for = (etiqueta PARA um nome)-->
+                        <input type="text" name="nome" id="nome" placeholder="Escreva seu nome"/> <!-- Input é um 'Campo de Entrada', tipo = tipo de dado que será indicado ali, name = Mesma informação que a da Label), id= identificação individual desse campo, placeholder = texto explicativo (função de acessibilidade)-->
+                    </div>
+
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="Escreva seu email" />
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
+                    </div>
+                
+                </fieldset>
+
+                <fieldset>
+                    <label for="estado">Estados:</label>
+                    <select name="estados" id="estados">
+                        <option value="sp">sp</option>
+                        <option value="rj">rj</option>
+                        <option value="pb">pb</option>
+                        <option value="es">es</option>
+                        <option value="mg">mg</option>
+                        <option value="df">df</option>
+                    </select>
+
+                    <label for="dn">Data de Nascimento: </label>
+                    <input type="date" name="dn" id="dn" />
+
+                    <label for="foto">Selecione uma foto: </label>
+                    <input type="file" name="foto" id="foto" accept="image/png, image/jpg, doc/pdf">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Você é um robô?</legend>
+                    <img
+                        src="https://images.vexels.com/media/users/3/201138/isolated/lists/143b8e1550deda3eadf5a8c0045cbb0f-robo-de-brinquedo-plano.png"
+                        width="50"
+                        alt="Figura de um robô vede"
+                    />
+
+                    <div>
+                        <input type="radio" name="robo" id="sim">
+                        <label for="sim">Sim, sou um robô</label>
+    
+                        <input type="radio" name="robo" id="nao">
+                        <label for="nao">Não sou um robô</label>
+    
+                        <input type="radio" name="robo" id="talvez">
+                        <label for="talvez">Talvez eu seja um robô</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="acordo" id="acordo" />
+                        <label for="acordo">Declaro que sou um robô e vim pedir educação no chatGPT</label>
+                    </div>
+                </fieldset>
+                
+                <!-- Input + Submit, apenas envia.  -->
+                <input type="submit" value="Enviar" />
+
+                <!-- Button, tem diversas possibilidades de funcionalidades -->
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </main>
+    </body>
+</html>

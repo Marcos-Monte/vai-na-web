@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- Informando ao navegador o tipo de documento, Doc - documento, TYPE - tipo -->
+<html lang="pt"> <!-- A tag HTML envolve todo o conteudo, lang (linguagem), dizendo o idoma que vamos utilizar na nossa página  -->
+<head> <!-- É utilizada para guardar informações e configurações da nossa página -->
+    <meta charset="UTF-8"> <!-- É inserida dentro da tag head e especifica um conjunto de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Turma 3</title> 
+    <style>
+        .imagem{
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .imagem:hover{
+            width: 250px;
+            filter: invert();
+        }
+    </style>
+</head>
+<body> 
+    <!-- Tags de Cabeçalho - ordem de prioridade de 1 até 6 -->
+    <h1>Eu sou o título mais importante</h1> <!-- Deve ser utilizado apenas 1 vez-->
+    <h2>Eu sou menos importante que o h1</h2>
+    <h3>Eu sou menos importante que o h2</h3>
+    <h4>Eu sou menos importante que o h3</h4>
+    <h5>Eu sou menos importante que o h4</h5>
+    <h6>Eu sou menos importante que o h5</h6>
+
+    <!-- Tag de Paragrafo  -->
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem ducimus blanditiis accusamus. Expedita enim quaerat repellendus optio neque dignissimos sed officia vitae possimus perspiciatis in nihil, quidem suscipit, sequi necessitatibus!</p>
+
+    <!-- Lista Ordenada - OL -->
+    <ol type='I'> <!-- Tipo da Lista -->
+        <li>Uva</li> <!-- Item da Lista -->
+        <li>Morango</li> <!-- Item da Lista -->
+        <li>Pera</li><!-- Item da Lista -->
+    </ol>
+
+    <!-- Lista Não Ordenada - UL -->
+    <ul type="circle"> <!-- Tipo da Lista -->
+        <li>Uva</li> <!-- Item da Lista -->
+        <li>Morango</li> <!-- Item da Lista -->
+        <li>Pera</li><!-- Item da Lista -->
+    </ul>
+
+    <!-- 
+        Imagem - img (tag auto-fechante - Não tem conteúdo, tem atributos)
+        src = resource, aponta para o endereço url ou o caminho da imagem
+        alt = alternative, texto alternativo
+    -->
+    <img class="imagem" src="https://imgsapp2.uai.com.br/app/noticia_133890394703/2015/08/27/171060/20150827103248253827e.jpg" alt="Imagem Ilustrativa" />
+
+    <img class="imagem" src="./assets/indian.jpg" alt="Indio Zica">
+    
+</body>
+</html>

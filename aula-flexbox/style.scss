@@ -1,0 +1,125 @@
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --corHeader: #D9D9D9;
+    --corFooter: #001C43;
+    --preto: #000;
+    --branco: #fff;
+}
+
+/* Header */
+
+/* Elemento pai de: img e nav */
+header {
+    height: 10vh;
+    background-color: var(--corHeader);
+    display: flex; /* Tornar esse elemento em uma Caixa Flexivel (FlexBox) */
+    /* Alinhamento no Eixo Principal */
+    justify-content: space-evenly; /* Centraliza no Eixo Principal*/
+    align-items: center; /* Centraliza no Eixo Secundario*/
+}
+
+/* Elemento pai de: ul */
+nav{
+    width: 50%;
+}
+
+/* Elemento pai de: li */
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none; /* Estilo da Lista - none é retirar qualquer estilo da lista*/
+}
+
+/* Elemento pai de: a */
+li {
+    font-size: 2rem;
+    text-transform: capitalize; /* é a transformação do texto, para: capitalize, lowercase e uppercase */
+}
+
+
+a {
+    text-decoration: none; /* Text-decoration é a decoração do texto, define a formatação, como: underline, overline e none */
+    color: var(--preto);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Main */
+main{
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    font-family: 'Inika', sans-serif;
+}
+
+.containerHistoria, .containerLogistica {
+    width: 30%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Fluxo de direção que segue a caixa-flexivel, tipo: row, row-reverse, column, column-reverse. Alterar o 'sentido' muda os 'eixos' tb */
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--preto);
+
+    h2{
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+
+    img, div {
+        height: 40%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        p{
+            width: 90%;
+            
+        }
+
+        button {
+            width: 12.8rem;
+            height: 3.8rem;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            border-radius: 3rem;
+            border: none;
+            background-color: var(--corHeader);
+        }
+
+        button:hover{
+            background-color: var(--corFooter);
+            color: #fff;
+        }
+    }
+
+}
+
+
+/* Footer */
+footer{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corFooter);
+    color: #fff;
+    font-family: 'inter', sans-serif;
+}

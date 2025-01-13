@@ -1,0 +1,16 @@
+/*  
+seletor {
+    propriedade: valor;
+}
+
+seletor = tags (h1, h2, p, img, header ...)
+propriedade = o que quero fazer?
+valor: como quero deixar.
+
+*/
+header h2 {
+  color: red;
+}
+header h3 {
+  color: blue;
+}/*# sourceMappingURL=style.css.map */
