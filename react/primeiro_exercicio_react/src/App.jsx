@@ -1,16 +1,20 @@
+// Import dos Componentes
+import Footer from "./components/footer/Footer";
+import Header from './components/header/Header';
+import Main from "./components/main/Main";
+
 function App(){
 
-  const titulo = 'Olá. Galerinha!';
-  const subtitulo = 'Bom dia!'
-  
   // Quando se retorna com (parenteses) significa que quer retornar um HTML
   return (
 
     // <> ... </> = Fragmento, não ocupa espaço no HTML e envolve os valores.
     // Muito usado no Componente Principal (App)
     <>
-      <h1>{ titulo }</h1>
-      <h2>{ subtitulo }</h2>
+      {/* Renderizando os Componentes: Header, Main e Footer */}
+      <Header />
+      <Main />
+      <Footer />
     </>
 
   )
