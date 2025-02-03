@@ -20,7 +20,7 @@ const Header = () => {
             <ul>
                 {
                     itens.map(
-                        (item) => <li>{ item }</li>
+                        (item, index) => <li key={index}>{ item }</li>
                     )
                 }
             </ul>

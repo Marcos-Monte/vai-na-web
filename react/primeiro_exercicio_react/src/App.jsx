@@ -1,6 +1,8 @@
 // Import dos Componentes
+import Contador from "./components/aulaUseState/Contador.jsx";
+import HookState from "./components/aulaUseState/HookUseState";
 import Footer from "./components/footer/Footer";
-import Header from './components/header/Header';
+import Header from './components/header/Header.jsx';
 import Main from "./components/main/Main";
 
 function App(){
@@ -13,7 +15,12 @@ function App(){
     <>
       {/* Renderizando os Componentes: Header, Main e Footer */}
       <Header />
-      <Main />
+      <Main 
+        exemploUseState1={<HookState/>}
+        exemploUseState2={<Contador />}
+      />
+      {/* <HookState />
+      <Contador /> */}
       <Footer />
     </>
 
