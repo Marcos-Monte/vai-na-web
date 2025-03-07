@@ -33,8 +33,10 @@ for i in range(3):
     # Limpar a tela
     os.system('cls')
 
-
+# Lendo o arquivo
 with open('ficha_cadastro.csv', mode='r') as arquivo:
+    # Objeto para leitura do arquivo
     dados = csv.reader(arquivo)
+    # Exibindo os dados
     for linha in dados:
         print(linha)
