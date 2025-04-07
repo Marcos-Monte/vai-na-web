@@ -5,6 +5,8 @@ from flask import Blueprint, request, jsonify
 # Jsonify -> Recurso do flask que envia os dados no formato Json
     # Oposto do Request, trabalha com a Resposta -> Envio dos Dados no Formato JSON, Envio dos Status (200, 404, 500...)
 
+from src.model.colaborador_model import Colaborador # Importa a classe molde de Colaborador
+from src.model import db # Importa a instância do banco de dados
 
 dados = [
     {'id': 1, 'nome': 'Karynne Moreira', 'cargo': 'CEO', 'cracha': '010101'},
@@ -29,17 +31,32 @@ def cadastrar_novo_coladorador():
     
     dados_requisicao = request.get_json()
     
-    if not dados_requisicao:
-        return jsonify({'error': 'Necessário enviar dados!'}), 400
+    # if not dados_requisicao:
+    #     return jsonify({'error': 'Necessário enviar dados!'}), 400
     
-    novo_colaborador = {
-        'id': len(dados) + 1,
-        'nome'.lower(): dados_requisicao['nome'],
-        'cargo': dados_requisicao['cargo'],
-        'cracha': dados_requisicao['cracha'],
-    }
+    # novo_colaborador = {
+    #     'id': len(dados) + 1,
+    #     'nome'.lower(): dados_requisicao['nome'],
+    #     'cargo': dados_requisicao['cargo'],
+    #     'cracha': dados_requisicao['cracha'],
+    # }
     
-    dados.append(novo_colaborador)
+    # dados.append(novo_colaborador)
+    
+    novo_colaborador = Colaborador(
+        nome=dados_requisicao['nome'],
+        email=dados_requisicao['email'],
+        senha=dados_requisicao['senha'],
+        cargo=dados_requisicao['cargo'],
+        salario=dados_requisicao['salario']
+    )
+    
+    # INSERT INTO tb_colaborador (nome, email, senha cargo, salario) 
+    # VALUES (
+        # dados_requisicao['nome'], dados_requisicao['email'], dados_requisicao['senha'], dados_requisicao['cargo'], dados_requisicao['salario']
+    #)
+    db.session.add(novo_colaborador)
+    db.session.commit() # Faz o commit no banco de dados, persistindo os dados
     
     return jsonify({'response': 'Colaborador cadastrado com sucesso'}), 201 # Retorna mensagem de sucesso e o Status Code de 'created'
 
