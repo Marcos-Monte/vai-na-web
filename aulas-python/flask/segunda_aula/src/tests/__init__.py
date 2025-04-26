@@ -1,0 +1,1 @@
+# Arquivo para o Python identificar como uma pasta (adicionado na hora dos testes)

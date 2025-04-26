@@ -24,3 +24,24 @@ class Colaborador(db.Model): # db.Model -> Mapear e criar a tabela
         self.cargo = cargo
         self.salario = salario
         
+# -------------------------------------------------------------------------------------------------
+    # Formata o tipo de dados que serão enviados ao FrontEnd
+    def to_dict(self) -> dict:
+        return {
+            'email': self.email,
+            'senha': self.senha,
+            'salario': self.salario,
+            'cargo': self.cargo,
+        }
+        
+#-------------------------------------------------------------------------------------------------
+    # Pega um Objeto e transforma em um Dicionário
+    def all_data(self) -> dict:
+        return {
+            'id': self.id,
+            'nome': self.nome,
+            'cargo': self.cargo,
+            'salario': self.salario,
+            'email': self.email,
+            'senha': self.senha,
+        }
